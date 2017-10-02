@@ -205,6 +205,12 @@ class AirCargoProblem(Problem):
         carried out from the current state in order to satisfy all of the goal
         conditions by ignoring the preconditions required for an action to be
         executed.
+        
+        Node has the current state.
+        Exploring each goal condition in the goal state and count the number of
+        individual actions that will make them happen. 
+        If a goal condition is already satisfied in the current state, 
+        no additional action for this condition is perfomed.
         """
         #  DONE implement (see Russell-Norvig Ed-3 10.2.3  or Russell-Norvig Ed-2 11.2)
         kb = PropKB()
