@@ -136,9 +136,11 @@ class AirCargoProblem(Problem):
             for clause in action.precond_pos:
                 if clause not in kb.clauses:
                     is_possible = False
+                    #break
             for clause in action.precond_neg:
                 if clause in kb.clauses:
                     is_possible = False
+                    #break
             if is_possible:
                 possible_actions.append(action)
         return possible_actions
@@ -158,12 +160,13 @@ class AirCargoProblem(Problem):
         for fluent in old_state.pos:
             if fluent not in action.effect_rem:
                 new_state.pos.append(fluent)
-        for fluent in action.effect_add:
-            if fluent not in new_state.pos:
-                new_state.pos.append(fluent)
         for fluent in old_state.neg:
             if fluent not in action.effect_add:
                 new_state.neg.append(fluent)
+                
+        for fluent in action.effect_add:
+            if fluent not in new_state.pos:
+                new_state.pos.append(fluent)
         for fluent in action.effect_rem:
             if fluent not in new_state.neg:
                 new_state.neg.append(fluent)
