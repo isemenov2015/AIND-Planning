@@ -25,7 +25,28 @@ All test runs finished successfully, exact solutions found, runtime required and
 
 #Solutions comparison
 
+##Optimal plans
 
+Optimal plans lengths for for cargo problems 1, 2, 3 are as follows:
+
+|Problem No|   Optimal path length |
+|-----|--------|
+|    1 |         6    |
+|    2 |         9    |
+|    3 |         12    |
+
+Specific examples of optimal paths may be found in the *Non-heuristic solutions / Breadth-first search* section of this document.
+
+##Non-heuristic solutions results discussion
+
+Specific results are located in the *Non-heuristic solutions* section of this document.
+
+Breadth-first search (BFS), depth-first search (DFS) and uniform-cost search (UCS) were chosen for non-heuristic solution comparison.
+
+BFS and UCS both produce optimal paths by the construction of the algorithms but it comes with a price of the number of planning graph vertices visited. Since the graph edges length for UCS is a constant during the whole computation session UCS and BFS are almost the same in terms of solution construction. The only difference is that the vertices are added to the solution in a different order but based on a same criteria.
+DFS produce fast and scarce in terms of visited nodes number solution but the paths produced are definitely far from optimal in terms of length.
+
+##Heuristic solutions results discussion
 
 #Non-heuristic solutions
 
