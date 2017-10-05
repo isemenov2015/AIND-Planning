@@ -41,12 +41,24 @@ Specific examples of optimal paths may be found in the *Non-heuristic solutions 
 
 Specific results are located in the *Non-heuristic solutions* section of this document.
 
-Breadth-first search (BFS), depth-first search (DFS) and uniform-cost search (UCS) were chosen for non-heuristic solution comparison.
+Breadth-first search (BFS), depth-first search (DFS) and uniform-cost search (UCS) were chosen for non-heuristic solutions comparison.
 
 BFS and UCS both produce optimal paths by the construction of the algorithms but it comes with a price of the number of planning graph vertices visited. Since the graph edges length for UCS is a constant during the whole computation session UCS and BFS are almost the same in terms of solution construction. The only difference is that the vertices are added to the solution in a different order but based on a same criteria.
 DFS produce fast and scarce in terms of visited nodes number solution but the paths produced are definitely far from optimal in terms of length.
 
 ##Heuristic solutions results discussion
+
+Specific results are located in the *Heuristic solutions* section of this document.
+
+A-star search with h_1 (pseudo), ignore preconditions and planning graph level sum heuristics were chosen for heuristic solutions comparison.
+
+All three heuristics produced optimal solutions for all cases, but the time required and number of nodes explored were significantly different.
+
+H_1 pseudoheuristic required maximum amount of added nodes along with expansions and node tests even in comparison with non-heuristic solutions, though it took less computation time among heuristic approaches due to the nature of the algorithm: this pseudo-heuristic does not require any computations (the function just return a 1).
+
+A-star search with level sum heuristic required by an order of magnitude less expansions and new nodes than ignore preconditions, but took up to two orders of magnitude computation time. Time issue is most likely an effect of using non-optimized data structures while traversing a planning graph ([Link to relevant discussion on Udacity forums](https://discussions.udacity.com/t/uniform-cost-search-faster-than-breadth-first/324045))
+
+A-star search with ignore preconditions and especially level sum heuristic are more efficient than non-heuristic methods in terms of required memory that may be crucial while applying those methods to more complicated tasks than Cargo problem test cases.
 
 #Non-heuristic solutions
 
