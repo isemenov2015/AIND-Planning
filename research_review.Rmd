@@ -1,0 +1,27 @@
+---
+title: "Research review"
+subtitle: "Brief review of historical development in the AI planning and search area"
+author: "Ilya Semenov"
+date: '6 October 2017'
+output: pdf_document
+---
+
+#Summary
+
+This document provides a brief review on three important papers in the field of AI planning and search that were crucial for the development of the AI scientific area. Papers reviewed are:
+
+* [PDDL The Planning Domain Definition Language](http://www.cs.cmu.edu/~mmv/planning/readings/98aips-PDDL.pdf)
+* [Unifying SAT-based and Graph-based Planning](http://www.cs.cornell.edu/selman/papers/pdf/99.ijcai.blackbox.pdf)
+* [An Empirical Analysis of Some Heuristic Features for Local Search in LP](http://www.aaai.org/Papers/ICAPS/2004/ICAPS04-022.pdf)
+
+#PDDL
+
+This 1998 [paper](http://www.cs.cmu.edu/~mmv/planning/readings/98aips-PDDL.pdf) provides a formal definition for Problem domain definition language syntax and semantics. PDDL provided pretty universal formalism for actions-goals-preconditions-effects schema that allowed development of domain-independent problem-solvers.
+
+#Unifying SAT-based and Graph-based Planning
+
+The [paper](http://www.cs.cornell.edu/selman/papers/pdf/99.ijcai.blackbox.pdf) describes a BLACKBOX planning system that combines constraint satisfaction approach with planning graph ideas. The paper was written as a step towards unifying planning frameworks [IJCAI Challenge, 1997](http://www.ijcai.org/past/ijcai-97/) and contains useful discussion on implementation of randomized systematic SAT algorithms for planning problems solving.
+
+#An Empirical Analysis of Some Heuristic Features for Local Search in LP
+
+This 2004 [paper](http://www.aaai.org/Papers/ICAPS/2004/ICAPS04-022.pdf) is a description of the LPG planner. LPG planner showed an outstanding performance during [Third International planning competition](http://ipc02.icaps-conference.org/). The paper contains experimental analysis of stochastic local search procedure that is a core of LPG together with discussion on different heuristics functions used to evaluate search neighborhood used to improve planner performance.
